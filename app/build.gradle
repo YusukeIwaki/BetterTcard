@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "io.github.yusukeiwaki.bettertcard"
+        minSdkVersion 23
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        Properties properties = new Properties()
+        properties.load(project.file('tcard.properties').newDataInputStream())
+        buildConfigField 'String', 'TCARD_NUMBER', "\"${properties.get('tcard_number')}\""
+        buildConfigField 'String', 'BIRTHDAY', "\"${properties.get('birthday')}\""
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    // implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+
+    implementation 'com.github.kittinunf.fuel:fuel:2.0.1'
+}
