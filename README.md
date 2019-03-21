@@ -1,6 +1,7 @@
 # Better T-Card
 
 公式アプリが使いづらすぎるので、起動してカードを表示するだけのアプリを作った。
+http://yusukeiwaki.hatenablog.com/entry/2019/02/04/T%E3%82%AB%E3%83%BC%E3%83%89%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B%E3%81%A0%E3%81%91%E3%81%AE%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%9F
 
 ![image](https://user-images.githubusercontent.com/11763113/52181360-4efb1900-2834-11e9-921a-445474d7116e.png)
 
